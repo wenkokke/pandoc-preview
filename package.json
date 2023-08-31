@@ -1,0 +1,29 @@
+{
+  "name": "pandoc-preview",
+  "description": "A Markdown Preview window using Pandoc.",
+  "version": "0.0.1",
+  "publisher": "wenkokke",
+  "repository": "https://github.com/wenkokke/vscode-pandoc-preview",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle=true --platform=node --external:vscode --outfile=extension.js",
+    "check": "tsc"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.73.0",
+    "esbuild": "^0.19.2",
+    "typescript": "^5.2.2"
+  }
+}
